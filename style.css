@@ -1,18 +1,16 @@
-/* Remove margens padrão */
+/* Reset */
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
 }
 
-/* Corpo da página */
 body{
     font-family:Arial, Helvetica, sans-serif;
     background:#f4f7fa;
     color:#333;
 }
 
-/* Cabeçalho */
 header{
     background:#0D47A1;
     color:white;
@@ -27,7 +25,6 @@ header h1{
     font-size:30px;
 }
 
-/* Menu */
 nav a{
     color:white;
     text-decoration:none;
@@ -40,7 +37,6 @@ nav a:hover{
     color:#64B5F6;
 }
 
-/* Banner base - propriedades comuns a todas as páginas */
 .banner{
     background-size: cover;
     background-position: center;
@@ -51,27 +47,23 @@ nav a:hover{
     position:relative;
 }
 
-/* Banner da página Início */
+/* CORRIGIDO - imagens na raiz */
 .banner-inicio{
-    background-image: url('../assets/images/logo-horizontal-fundo-escuro.jpg.jpeg');
+    background-image: url('logo-horizontal-fundo-escuro.jpg.jpeg');
 }
 
-/* Banner da página Síndromes */
 .banner-sindrome{
-    background-image: url('../assets/images/simbolo-fundo-escuro.jpg.jpeg');
+    background-image: url('simbolo-fundo-escuro.jpg.jpeg');
 }
 
-/* Banner da página Autocuidado */
 .banner-autocuidado{
-    background-image: url('../assets/images/logo-horizontal.jpg.jpeg');
+    background-image: url('logo-horizontal.jpg.jpeg');
 }
 
 .banner-sobre{
-    background-image: url('../assets/images/favicon.jpg.jpeg');
+    background-image: url('favicon.jpg.jpeg');
 }
 
-
-/* Overlay escuro para o texto ficar legível */
 .banner::before{
     content:"";
     position:absolute;
@@ -98,28 +90,10 @@ nav a:hover{
     margin-bottom:25px;
 }
 
-/* Botão */
-button{
-    background:#4CAF50;
-    color:white;
-    border:none;
-    padding:15px 30px;
-    border-radius:8px;
-    cursor:pointer;
-    font-size:18px;
-    transition:0.3s;
-}
-
-button:hover{
-    background:#2E7D32;
-}
-
-/* Seções */
 section{
     padding:60px;
 }
 
-/* Cards */
 .container{
     display:flex;
     justify-content:center;
@@ -128,58 +102,6 @@ section{
     margin-top:30px;
 }
 
-/* Card com imagem ilustrativa da pasta ASSETS */
-.card-imagem{
-    width:280px;
-    background:white;
-    border-radius:10px;
-    box-shadow:0 5px 15px rgba(0,0,0,.2);
-    text-align:center;
-    transition:.3s;
-    overflow:hidden;
-}
-
-.card-imagem:hover{
-    transform:translateY(-10px);
-}
-
-.card-imagem img{
-    width:100%;
-    height:180px;
-    object-fit:cover;
-}
-
-.card-imagem .conteudo{
-    padding:20px;
-}
-
-.card-imagem h3{
-    color:#0D47A1;
-    margin-bottom:10px;
-    font-size:20px;
-}
-
-.card-imagem p{
-    margin-bottom:15px;
-    font-size:15px;
-    color:#555;
-}
-
-.card-imagem a{
-    text-decoration:none;
-    background:#1976D2;
-    color:white;
-    padding:10px 18px;
-    border-radius:5px;
-    display:inline-block;
-    transition:0.3s;
-}
-
-.card-imagem a:hover{
-    background:#0D47A1;
-}
-
-/* Card sem imagem */
 .card{
     width:280px;
     background:white;
@@ -220,7 +142,6 @@ section{
     background:#0D47A1;
 }
 
-/* Lista */
 .dicas ul{
     margin-top:20px;
     line-height:2.2;
@@ -238,14 +159,12 @@ section{
     border-bottom:none;
 }
 
-/* Seção de ajuda */
 .ajuda{
     background:#e3f2fd;
     border-radius:10px;
     text-align:center;
 }
 
-/* Rodapé */
 footer{
     background:#0D47A1;
     color:white;
@@ -253,7 +172,6 @@ footer{
     padding:20px;
 }
 
-/* Responsividade */
 @media (max-width:768px){
     header{
         flex-direction:column;
@@ -281,7 +199,7 @@ footer{
         padding:30px 15px;
     }
     
-    .card, .card-imagem{
+    .card{
         width:100%;
         max-width:320px;
     }
