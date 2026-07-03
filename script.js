@@ -3,12 +3,12 @@ function mensagem() {
     alert("Cuide da sua mente! Explore nosso conteúdo para saber mais.");
 }
 
-// Modo Noturno (opcional – adicionar no header)
+// Modo Noturno (opcional)
 function alternarModo() {
     document.body.classList.toggle('modo-noturno');
 }
 
-// Frase do dia (opcional)
+// Frase do dia
 const frases = [
     "Você não precisa dar conta de tudo ao mesmo tempo.",
     "Cuidar de si mesmo não é egoísmo, é sobrevivência.",
@@ -23,5 +23,4 @@ function fraseDoDia() {
     return frases[indice];
 }
 
-// Exibir frase no console
 console.log("💙 Frase do dia:", fraseDoDia());
