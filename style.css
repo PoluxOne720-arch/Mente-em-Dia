@@ -1,0 +1,288 @@
+/* Remove margens padrão */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* Corpo da página */
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f4f7fa;
+    color:#333;
+}
+
+/* Cabeçalho */
+header{
+    background:#0D47A1;
+    color:white;
+    padding:20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+}
+
+header h1{
+    font-size:30px;
+}
+
+/* Menu */
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:20px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#64B5F6;
+}
+
+/* Banner base - propriedades comuns a todas as páginas */
+.banner{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color:white;
+    text-align:center;
+    padding: 120px 20px;
+    position:relative;
+}
+
+/* Banner da página Início */
+.banner-inicio{
+    background-image: url('../assets/images/logo-horizontal-fundo-escuro.jpg.jpeg');
+}
+
+/* Banner da página Síndromes */
+.banner-sindrome{
+    background-image: url('../assets/images/simbolo-fundo-escuro.jpg.jpeg');
+}
+
+/* Banner da página Autocuidado */
+.banner-autocuidado{
+    background-image: url('../assets/images/logo-horizontal.jpg.jpeg');
+}
+
+.banner-sobre{
+    background-image: url('../assets/images/favicon.jpg.jpeg');
+}
+
+
+/* Overlay escuro para o texto ficar legível */
+.banner::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background:rgba(0,0,0,0.6);
+}
+
+.banner div{
+    position:relative;
+    z-index:1;
+}
+
+.banner h2{
+    font-size:32px;
+    margin-bottom:20px;
+    line-height:1.4;
+}
+
+.banner p{
+    font-size:20px;
+    margin-bottom:25px;
+}
+
+/* Botão */
+button{
+    background:#4CAF50;
+    color:white;
+    border:none;
+    padding:15px 30px;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:18px;
+    transition:0.3s;
+}
+
+button:hover{
+    background:#2E7D32;
+}
+
+/* Seções */
+section{
+    padding:60px;
+}
+
+/* Cards */
+.container{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+    margin-top:30px;
+}
+
+/* Card com imagem ilustrativa da pasta ASSETS */
+.card-imagem{
+    width:280px;
+    background:white;
+    border-radius:10px;
+    box-shadow:0 5px 15px rgba(0,0,0,.2);
+    text-align:center;
+    transition:.3s;
+    overflow:hidden;
+}
+
+.card-imagem:hover{
+    transform:translateY(-10px);
+}
+
+.card-imagem img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+}
+
+.card-imagem .conteudo{
+    padding:20px;
+}
+
+.card-imagem h3{
+    color:#0D47A1;
+    margin-bottom:10px;
+    font-size:20px;
+}
+
+.card-imagem p{
+    margin-bottom:15px;
+    font-size:15px;
+    color:#555;
+}
+
+.card-imagem a{
+    text-decoration:none;
+    background:#1976D2;
+    color:white;
+    padding:10px 18px;
+    border-radius:5px;
+    display:inline-block;
+    transition:0.3s;
+}
+
+.card-imagem a:hover{
+    background:#0D47A1;
+}
+
+/* Card sem imagem */
+.card{
+    width:280px;
+    background:white;
+    padding:25px;
+    border-radius:10px;
+    box-shadow:0 5px 15px rgba(0,0,0,.2);
+    text-align:center;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card h3{
+    color:#0D47A1;
+    margin-bottom:15px;
+    font-size:20px;
+}
+
+.card p{
+    margin-bottom:15px;
+    font-size:15px;
+    color:#555;
+}
+
+.card a{
+    text-decoration:none;
+    background:#1976D2;
+    color:white;
+    padding:10px 18px;
+    border-radius:5px;
+    display:inline-block;
+    transition:0.3s;
+}
+
+.card a:hover{
+    background:#0D47A1;
+}
+
+/* Lista */
+.dicas ul{
+    margin-top:20px;
+    line-height:2.2;
+    font-size:18px;
+    list-style:none;
+    padding:0;
+}
+
+.dicas ul li{
+    padding:5px 0;
+    border-bottom:1px solid #eee;
+}
+
+.dicas ul li:last-child{
+    border-bottom:none;
+}
+
+/* Seção de ajuda */
+.ajuda{
+    background:#e3f2fd;
+    border-radius:10px;
+    text-align:center;
+}
+
+/* Rodapé */
+footer{
+    background:#0D47A1;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+/* Responsividade */
+@media (max-width:768px){
+    header{
+        flex-direction:column;
+        text-align:center;
+    }
+    
+    nav{
+        margin-top:15px;
+    }
+
+    nav a{
+        margin:0 10px;
+        font-size:14px;
+    }
+    
+    .banner h2{
+        font-size:22px;
+    }
+    
+    .banner p{
+        font-size:16px;
+    }
+    
+    section{
+        padding:30px 15px;
+    }
+    
+    .card, .card-imagem{
+        width:100%;
+        max-width:320px;
+    }
+}
